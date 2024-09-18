@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
+    <title>Emma Högdal</title>
+</head>
+
+<body>
+    <header>
+        <h1>Emma Högdal</h1>
+        <h2><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+            </svg>
+            <br>Student inom Webbutveckling .NET <br>
+            Campus Värnamo
+        </h2>
+    </header>
+    <nav id="navBtns" hide>
+        <button class="aboutMe" >Om mig</button>
+        <button class="workExp">Arbetslivserfarenhet</button>
+    </nav>
+
+    <main>
+        <!--Sektionen om mig-->
+        <div class="total">
+            <div class="omMig hide">
+                <h3>Om mig</h3>
+                <p>Hej! Emma Högdal heter jag och har i augusti -24 påbörjat min studieresa inom webbutveckling. <br>
+                    Tidigare har jag varit kommunalt anställd som löneadministratör, men även som barnskötare. Utöver
+                    det kommunala har
+                    jag också varit anställd hos PostNord. <br>
+                    Mitt mål för framtiden är just nu att slutföra min utbildning så att jag så småningom kan arbeta
+                    inom denna branch.</p>
+                <img onclick="swapImage()" id="mePic" src="images/mePic.jpg" alt="En svartvit bild på Emma">
+                <p>Click The Pic!</p>
+            </div>
+            <!--Klockan-->
+        <div id="clock" hide>
+            <span id="hours">00
+            </span>:
+
+            <span id="minutes">00
+            </span>:
+
+            <span id="seconds">00
+            </span>
+        </div>
+            <!--Mina arbetslivserfarenheter-->
+            <div class="arbErf hide">
+                <h3>Tidigare arbetslivserfarenhet <br>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                        fill="#5f6368">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
+                    </svg>
+                </h3>
+                <p><i>2023-2024</i><br>
+                    <b>Löneadministratör</b> Kumla kommun <br>
+                </p>
+                <p><i>2023</i> <br>
+                    <b>Löneadministratör</b>, behovsanställd
+                </p>
+                <p><i>2023</i><br>
+                    <b>Barnskötare</b>, behovsanställd + månadsanställd
+                </p>
+                <p><i>2022</i><br>
+                    <b>Föräldraledig</b>
+                </p>
+                <p><i>2019-2021 </i><br>
+                    <b>Brevbärare</b>, PostNord
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+
+
+</body>
+
+</html>
