@@ -1,4 +1,7 @@
 let imageElement = document.getElementById("mePic");
+let navBtns = document.getElementById("navBtns");
+let backButton = document.createElement("button");
+backButton.innerText = "Tillbaka";
 
 let omMig = document.querySelector(".omMig");
 let aboutMe = document.querySelector(".aboutMe");
@@ -10,15 +13,26 @@ let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
 
 aboutMe.addEventListener("click", () => {
+    backButton.classList.remove("hide");
     omMig.classList.remove("hide");
     arbErf.classList.add("hide");
     clock.classList.add("hide");
+    navBtns.appendChild(backButton);
 })
 
 workExp.addEventListener("click", () => {
+    backButton.classList.remove("hide");
     arbErf.classList.remove("hide");
     omMig.classList.add("hide");
     clock.classList.add("hide");
+    navBtns.appendChild(backButton);
+})
+
+backButton.addEventListener("click", () => {
+    arbErf.classList.add("hide");
+    omMig.classList.add("hide");
+    backButton.classList.add("hide");
+    clock.classList.remove("hide");
 })
 
 function swapImage(){

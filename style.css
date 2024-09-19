@@ -5,11 +5,11 @@ header {
     border-bottom-right-radius: 5em;
 }
 
-img{
+img {
     width: 7em;
 }
 
-.total{
+.total {
     width: 100%;
     margin: auto;
     text-align: center;
@@ -17,7 +17,7 @@ img{
     justify-content: space-between;
 }
 
-#clock{
+#clock {
     font-size: 3em;
     margin-top: 1em;
     font-family: 'Digital-7 Mono', sans-serif;
@@ -26,31 +26,30 @@ img{
 }
 
 @media (min-width: 1800px) {
-#navBtns{
-    display: none;
-}
+    #navBtns {
+        display: none;
+    }
 
-img{
-    width: 15em;
-}
+    img {
+        width: 15em;
+    }
 
-.total{
-    width: 70%;
-}
+    .total {
+        width: 70%;
+    }
 
-#clock{
-    font-size: 4em;
-    margin-top: 1em;
-}
+    #clock {
+        font-size: 4em;
+        margin-top: 1em;
+    }
 
-.omMig{
-    width: 30%;
-}
+    .omMig {
+        width: 30%;
+    }
 
-.arbErf{
-    width: 30%;
-}
-
+    .arbErf {
+        width: 30%;
+    }
 }
 
 @media (min-width: 901px) and (max-width: 1800px) {
@@ -65,38 +64,38 @@ img{
         border-bottom-right-radius: 5em;
     }
 
-    .total{
+    .total {
         width: 90%;
     }
 
-    .omMig{
+    .omMig {
         width: 30%;
     }
 
-    .arbErf{
+    .arbErf {
         width: 30%;
     }
 
-    img{
+    img {
         width: 10em;
     }
 
-    #clock{
+    #clock {
         font-size: 4em;
         margin-top: 1em;
     }
 }
 
-@media (min-width: 601px) and (max-width: 900px){
+@media (min-width: 601px) and (max-width: 900px) {
     #navBtns {
         display: none;
     }
 
-    img{
+    img {
         width: 7em;
     }
 
-    .total{
+    .total {
         width: 90%;
         margin: auto;
         text-align: center;
@@ -104,15 +103,15 @@ img{
         justify-content: space-between;
     }
 
-    .omMig{
+    .omMig {
         width: 35%;
     }
 
-    .arbErf{
+    .arbErf {
         width: 35%;
     }
 
-    #clock{
+    #clock {
         font-size: 2.5em;
         margin-top: 1em;
     }
