@@ -1,32 +1,33 @@
-#myName{
+#myName {
     font-family: 'Mono Grass', sans-serif;
     font-weight: 100;
 }
 
-header{
-    background: linear-gradient(45deg, #b8e0b880 25%, transparent 21%) , linear-gradient(315deg, #b8e0b880 25%, transparent 21%), linear-gradient(45deg, #b8e0b8 10%, transparent 11%), linear-gradient(315deg, #b8e0b8 10%, transparent 11%),linear-gradient(135deg, #b8e0b880 25%, transparent 21%) , linear-gradient(225deg, #b8e0b880 25%, transparent 21%), linear-gradient(135deg, #b8e0b8 10%, transparent 11%), linear-gradient(225deg, #b8e0b8 10%, transparent 11%), radial-gradient(#b8e0b8 20%, transparent 21%);
-        background-size: 2em 2em;
-        background-color: #ffffff;
+header {
+    background: linear-gradient(45deg, #b8e0b880 25%, transparent 21%), linear-gradient(315deg, #b8e0b880 25%, transparent 21%), linear-gradient(45deg, #b8e0b8 10%, transparent 11%), linear-gradient(315deg, #b8e0b8 10%, transparent 11%), linear-gradient(135deg, #b8e0b880 25%, transparent 21%), linear-gradient(225deg, #b8e0b880 25%, transparent 21%), linear-gradient(135deg, #b8e0b8 10%, transparent 11%), linear-gradient(225deg, #b8e0b8 10%, transparent 11%), radial-gradient(#b8e0b8 20%, transparent 21%);
+    background-size: 2em 2em;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-around;
 }
 
-.links{
+.links {
     align-content: center;
 }
 
-a, a:visited{
+a,
+a:visited {
     color: black;
     text-decoration: none;
     font-size: 1.3em;
 }
 
-main{
+main {
     width: 100%;
     text-align: center;
 }
 
-img{
+img {
     width: 8em;
     border-radius: 10em;
     border: dotted;
@@ -34,7 +35,7 @@ img{
     margin-top: 5em;
 }
 
-nav{
+nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -45,100 +46,142 @@ nav{
     margin: 6em auto 0 auto;
 }
 
-#clock{
+#clock {
     font-family: 'Digital-7 Mono', sans-serif;
     font-family: 'Digital-7', sans-serif;
     font-family: 'Digital-7 Italic', sans-serif;
+    display: none;
 }
 
-.meLinks{
+
+.meLinks {
     border: 1px solid black;
     font-family: 'Mono Grass', sans-serif;
     font-weight: lighter;
     margin-top: 0.7em;
 }
+
 /*
 #aboutMe, #contactMe{
     width: 80%;
     margin: auto;
 }
 */
-#workExp{
+#workExp {
     width: 100%;
 }
 
-iframe{
+iframe {
     width: 100%;
     height: 700px;
 }
 
-#firstH3{
+#firstH3 {
     margin-top: 40vh;
 }
 
-h3{
+h3 {
     font-family: 'Mono Grass', sans-serif;
     font-weight: lighter;
     margin-top: 5em;
 }
 
-@media (min-width: 800px) {
-    header{
+@media (min-width: 700px) and (max-width: 1000px) {
+    .hide {
+        display: none;
+    }
+
+    #firstH3,
+    h3 {
+        margin-top: 2em;
+    }
+
+    #textContent {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+    }
+
+    #contactMe {
+        order: 1;
+        width: 13em;
+        margin: auto;
+    }
+
+    #aboutMe {
+        order: 3;
+        width: 50%;
+        margin: auto;
+    }
+
+    #workExp {
+        order: 4;
+        width: 75%;
+        margin: auto;
+    }
+
+    img {
+        width: 30%;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+    header {
         background-size: 4em 4em;
     }
 
-    .links{
+    .links {
         font-size: 1.5em;
     }
 
-    #myName{
+    #myName {
         font-size: 3em;
     }
 
-    img{
-        width: 15em;
+    img {
+        width: 12em;
         margin-left: 2%;
     }
 
-    #imageMe{
+    #imageMe {
         width: 80%;
-        
     }
 
-    main{
+    main {
         text-align: start;
         width: 90%;
         margin: auto;
     }
 
-    #textContent{
+    #textContent {
         display: flex;
         justify-content: space-evenly;
         text-align: center;
         margin: auto;
     }
 
-    .hide{
+    .hide {
         display: none;
     }
 
-    #firstH3{
-    margin-top: 0em;
-    }
-
-    h3{
+    #firstH3 {
         margin-top: 0em;
     }
 
-    #aboutMe{
-        width: 25%;
-        order: 2;
-        margin: -20em auto 0 auto;
-        height: 50%;
-        margin-left: 15em;
+    h3 {
+        margin-top: 0em;
     }
 
-    #contactMe{
+    #aboutMe {
+        width: 35%;
+        order: 2;
+        margin: -15em auto 0 auto;
+        height: 50%;
+    }
+
+    #contactMe {
         order: 1;
         width: 15em;
         height: 8em;
@@ -147,22 +190,91 @@ h3{
         margin-left: 2%;
     }
 
-    #workExp{
+    #workExp {
         order: 3;
-        margin-top: -25em;
-        width: 40%;
+        margin-top: -20em;
+        width: 35%;
     }
 
-    iframe{
-        width: 60%;
+    iframe {
+        width: 100%;
         height: 550px;
     }
 
-    #clock{
-       order: 3;
-       width: 100%;
-       margin-top: 2em;
-       font-size: 3em;
-       height: 1.5em;
+    #clock {
+        order: 3;
+        width: 100%;
+        margin-top: 2em;
+        font-size: 3em;
+        height: 1.5em;
+        display: block;
+    }
+}
+
+@media (min-width: 1400px) {
+    header {
+        background-size: 4em 4em;
+    }
+    #myName {
+        font-size: 3em;
+    }
+    .links {
+        font-size: 1.5em;
+    }
+    main {
+        text-align: start;
+        width: 90%;
+        margin: auto;
+    }
+    img {
+        width: 12em;
+        margin-left: 2%;
+    }
+    #imageMe {
+        width: 80%;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    #firstH3 {
+        margin-top: 0em;
+    }
+
+    h3 {
+        margin-top: 0em;
+    }
+    #textContent {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        margin: auto;
+    }
+    #contactMe {
+        order: 1;
+        width: 15em;
+        height: 8em;
+        margin-top: 1em;
+        text-align: center;
+    }
+    #aboutMe {
+        width: 30%;
+        order: 2;
+        margin: -15em auto 0 auto;
+        height: 50%;
+    }
+    #workExp {
+        order: 3;
+        margin-top: -20em;
+        width: 25%;
+    }
+    #clock {
+        order: 3;
+        width: 100%;
+        margin-top: 2em;
+        font-size: 4em;
+        height: 1.5em;
+        display: block;
     }
 }
