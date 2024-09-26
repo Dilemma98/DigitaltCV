@@ -76,7 +76,7 @@ iframe {
 h3 {
     font-family: 'Mono Grass', sans-serif;
     font-weight: lighter;
-    margin-top: 5em;
+    margin-top: 4em;
 }
 
 #githubRepos{
@@ -206,6 +206,9 @@ h3 {
         font-size: 3em;
         height: 1.5em;
         display: block;
+    }
+    #gthbH{
+        margin-top: 3em;
     }
 }
 
