@@ -81,6 +81,17 @@ h3 {
 
 #githubRepos{
     font-size: 0.8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+}
+.listRepos{
+    background-color: rgb(211, 211, 211, 0.2);
+    width: 10em;
+    padding: 0.8em;
+    border-radius: 2em;
 }
 
 
@@ -121,6 +132,10 @@ h3 {
 
     img {
         width: 30%;
+    }
+
+    #githubRepos{
+        width: 90%;
     }
 
 }
@@ -210,6 +225,9 @@ h3 {
     #gthbH{
         margin-top: 3em;
     }
+    #githubRepos{
+        width: 100%;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -283,5 +301,8 @@ h3 {
     }
     #gthbH{
         margin-top: 5em;
+    }
+    #githubRepos{
+        width: 100%;
     }
 }
