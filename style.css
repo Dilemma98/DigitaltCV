@@ -45,15 +45,6 @@ nav {
     width: 70%;
     margin: 6em auto 0 auto;
 }
-
-#clock {
-    font-family: 'Digital-7 Mono', sans-serif;
-    font-family: 'Digital-7', sans-serif;
-    font-family: 'Digital-7 Italic', sans-serif;
-    display: none;
-}
-
-
 .meLinks {
     border: 1px solid black;
     font-family: 'Mono Grass', sans-serif;
@@ -242,7 +233,7 @@ h3 {
     }
     main {
         text-align: start;
-        width: 65%;
+        width: 80%;
         margin: auto;
     }
     img {
@@ -286,7 +277,7 @@ h3 {
     #workExp {
         order: 3;
         margin-top: -20em;
-        width: 30%;
+        width: 35%;
     }
     iframe{
         width: 100%;
