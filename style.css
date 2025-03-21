@@ -27,12 +27,62 @@ main {
     text-align: center;
 }
 
+#school{
+    text-align: center;
+    width: 40vw;
+    margin: auto;
+    font-size: 1.3em;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.progress {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0; /* Initial width */
+    height: 20px; /* Bar height */
+    background-color: #4caf50;
+    text-align: center;
+    color: white;
+    line-height: 20px; /* Vertically center the text */
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out; /* Smooth transition */
+}
+
+.progress-bar-striped {
+    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+}
+
+.progress-bar-animated {
+    animation: progress-bar-stripes 1s linear infinite;
+}
+
+@keyframes progress-bar-stripes {
+    0% {
+        background-position: 40px 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
 img {
     width: 8em;
     border-radius: 10em;
     border: dotted;
     padding: 0.5em;
-    margin-top: 5em;
+    margin-top: 3em;
 }
 
 nav {
@@ -51,6 +101,11 @@ nav {
     font-weight: lighter;
     margin-top: 0.7em;
 }
+
+#textContent{
+    font-size: 1.1em;
+}
+
 #workExp {
     width: 100%;
 }
@@ -61,7 +116,7 @@ iframe {
 }
 
 #firstH3 {
-    margin-top: 40vh;
+    margin-top: 20vh;
 }
 
 h3 {
@@ -260,6 +315,7 @@ h3 {
         justify-content: space-evenly;
         text-align: center;
         margin: auto;
+        font-size: 1.2em;
     }
     #contactMe {
         order: 1;
@@ -276,7 +332,7 @@ h3 {
     }
     #workExp {
         order: 3;
-        margin-top: -20em;
+        margin-top: -18em;
         width: 35%;
     }
     iframe{
