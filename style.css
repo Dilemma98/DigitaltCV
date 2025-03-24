@@ -1,14 +1,10 @@
-#myName {
-    font-family: 'Mono Grass', sans-serif;
-    font-weight: 100;
+body {
+    background-color: #f6f4f2;
+    color: #6b7163;
 }
 
 header {
-    background: linear-gradient(45deg, #b8e0b880 25%, transparent 21%), linear-gradient(315deg, #b8e0b880 25%, transparent 21%), linear-gradient(45deg, #b8e0b8 10%, transparent 11%), linear-gradient(315deg, #b8e0b8 10%, transparent 11%), linear-gradient(135deg, #b8e0b880 25%, transparent 21%), linear-gradient(225deg, #b8e0b880 25%, transparent 21%), linear-gradient(135deg, #b8e0b8 10%, transparent 11%), linear-gradient(225deg, #b8e0b8 10%, transparent 11%), radial-gradient(#b8e0b8 20%, transparent 21%);
-    background-size: 2em 2em;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-around;
+    padding-bottom: 3em;
 }
 
 .links {
@@ -17,7 +13,7 @@ header {
 
 a,
 a:visited {
-    color: black;
+    color: #5b5f55;
     text-decoration: none;
     font-size: 1.3em;
 }
@@ -27,37 +23,42 @@ main {
     text-align: center;
 }
 
-#school{
+
+#school {
     text-align: center;
-    width: 40vw;
+    width: 100%;
     margin: auto;
-    font-size: 1.3em;
+    font-size: 2em;
+}
+
+.schoolHeader {
+    margin-top: 2em;
 }
 
 .progress-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 50%;
     margin: auto;
 }
 
 .progress {
     width: 100%;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .progress-bar {
-    width: 0; /* Initial width */
-    height: 20px; /* Bar height */
-    background-color: #4caf50;
+    width: 0;
+    height: 20px;
+    background-color: #78c87b;
     text-align: center;
-    color: white;
-    line-height: 20px; /* Vertically center the text */
+    color: rgb(0, 0, 0);
+    line-height: 20px;
     border-radius: 10px;
-    transition: width 0.5s ease-in-out; /* Smooth transition */
+    transition: width 0.5s ease-in-out;
 }
 
 .progress-bar-striped {
@@ -77,12 +78,13 @@ main {
         background-position: 0 0;
     }
 }
+
 img {
     width: 8em;
     border-radius: 10em;
-    border: dotted;
     padding: 0.5em;
     margin-top: 3em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 nav {
@@ -95,6 +97,7 @@ nav {
     width: 70%;
     margin: 6em auto 0 auto;
 }
+
 .meLinks {
     border: 1px solid black;
     font-family: 'Mono Grass', sans-serif;
@@ -102,12 +105,27 @@ nav {
     margin-top: 0.7em;
 }
 
-#textContent{
+#textContent {
     font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+}
+img{
+    margin-bottom: -3em;
+}
+#contactMe{
+    order: 1;
+    margin-top: -2em;
+}
+
+#aboutMe{
+    order: 2;
+    margin-top: -4em;
 }
 
 #workExp {
     width: 100%;
+    order: 3;
 }
 
 iframe {
@@ -125,7 +143,7 @@ h3 {
     margin-top: 4em;
 }
 
-#githubRepos{
+#githubRepos {
     font-size: 0.8em;
     display: flex;
     flex-wrap: wrap;
@@ -133,15 +151,31 @@ h3 {
     width: 80%;
     margin: auto;
 }
-.listRepos{
-    background-color: rgb(211, 211, 211, 0.2);
-    width: 10em;
-    padding: 0.8em;
-    border-radius: 2em;
+
+.listRepos {
+    background-color: #f3ece7;
+    /* Bakgrundsfärg från din palett */
+    width: auto;
+    max-width: 300px;
+    padding: 1em;
+    border-radius: 1.5em;
+    /* Rundare hörn för en mer modern känsla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Lätt skugga för att ge djup */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* För animation vid hover */
+    margin: 20px auto;
+}
+
+.listRepos:hover {
+    transform: translateY(-15px);
+    /* Lätt uppåt-push vid hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Djupare skugga vid hover */
 }
 
 
-@media (min-width: 700px) and (max-width: 1000px) {
+@media (min-width: 700px) and (max-width: 1200px) {
     .hide {
         display: none;
     }
@@ -168,136 +202,66 @@ h3 {
         order: 3;
         width: 50%;
         margin: auto;
+
     }
 
     #workExp {
         order: 4;
-        width: 75%;
+        width: 50%;
         margin: auto;
     }
 
     img {
-        width: 30%;
+        width: 100%;
+        margin-bottom: 0em;
     }
 
-    #githubRepos{
+    #githubRepos {
         width: 90%;
     }
 
 }
 
-@media (min-width: 1000px) and (max-width: 1400px) {
-    header {
-        background-size: 4em 4em;
-    }
 
-    .links {
-        font-size: 1.5em;
-    }
+@media (min-width: 1200px) {
 
-    #myName {
-        font-size: 3em;
-    }
-
-    img {
-        width: 12em;
-        margin-left: 2%;
-    }
-
-    #imageMe {
-        width: 80%;
-    }
-
-    main {
-        text-align: start;
-        width: 90%;
-        margin: auto;
-    }
-
-    #textContent {
-        display: flex;
-        justify-content: space-evenly;
-        text-align: center;
-        margin: auto;
-    }
-
-    .hide {
-        display: none;
-    }
-
-    #firstH3 {
-        margin-top: 0em;
-    }
-
-    h3 {
-        margin-top: 0em;
-    }
-
-    #aboutMe {
-        width: 35%;
-        order: 2;
-        margin: -15em auto 0 auto;
-        height: 50%;
-    }
-
-    #contactMe {
-        order: 1;
-        width: 15em;
-        height: 8em;
-        margin-top: 1em;
-        text-align: center;
-        margin-left: 2%;
-    }
-
+    #aboutMe,
     #workExp {
-        order: 3;
-        margin-top: -20em;
-        width: 35%;
+        margin-top: 1em !important;
+        /* Nollställ margin-top för andra element om nödvändigt */
     }
 
-    iframe {
-        width: 100%;
-        height: 550px;
+    #school {
+        width: 70%;
+    }
+    .schoolHeader{
+        margin-top: 1em;
+    }
+    .progress-container{
+        margin-top: -1em;
     }
 
-    #clock {
-        order: 3;
-        width: 100%;
-        margin-top: 2em;
-        font-size: 3em;
-        height: 1.5em;
-        display: block;
-    }
-    #gthbH{
-        margin-top: 3em;
-    }
-    #githubRepos{
-        width: 100%;
-    }
-}
-
-@media (min-width: 1400px) {
-    header {
-        background-size: 4em 4em;
-    }
-    #myName {
-        font-size: 3em;
-    }
     .links {
         font-size: 1.5em;
     }
+
     main {
         text-align: start;
-        width: 80%;
+        width: 90%;
         margin: auto;
     }
+
+    #contactMe{
+        position: fixed;
+        top: 7em;
+        left: 2em;
+    }
+
     img {
         width: 12em;
-        margin-left: 2%;
+        margin-bottom: 2em;
     }
-    #imageMe {
-        width: 80%;
-    }
+
 
     .hide {
         display: none;
@@ -310,38 +274,40 @@ h3 {
     h3 {
         margin-top: 0em;
     }
+
     #textContent {
         display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
         text-align: center;
         margin: auto;
         font-size: 1.2em;
+        margin-left: 2em;
     }
-    #contactMe {
-        order: 1;
-        width: 15em;
-        height: 8em;
-        margin-top: 1em;
-        text-align: center;
-    }
+
+   
     #aboutMe {
         width: 30%;
         order: 2;
-        margin: -15em auto 0 auto;
+        margin: -20em auto 0 auto;
         height: 50%;
     }
+
     #workExp {
         order: 3;
-        margin-top: -18em;
         width: 35%;
+        margin-left: -10em;
     }
-    iframe{
+
+    iframe {
         width: 100%;
     }
-    #gthbH{
-        margin-top: 5em;
+
+    #gthbH {
+        margin-top: 3em;
     }
-    #githubRepos{
+
+    #githubRepos {
         width: 100%;
     }
 }
