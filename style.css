@@ -1,10 +1,32 @@
-body {
+.dark-mode{
+    background-color: #25384a;
+    color: #f1f2e0;
+}
+
+.dark-mode .listRepos{
+    background-color: #1a2b3a;
+}
+.dark-mode a, .dark-mode a:visited{
+    color: #f1f2e0;
+}
+
+body, .light-mode {
     background-color: #f6f4f2;
     color: #6b7163;
 }
 
 header {
     padding-bottom: 3em;
+}
+
+#darkmode{
+    position:absolute;
+    top: 3em;
+    right: 1em;
+    font-size: 2em;
+}
+#darkmode:hover{
+    cursor: pointer;
 }
 
 .links {
@@ -26,7 +48,7 @@ main {
 
 #school {
     text-align: center;
-    width: 100%;
+    width: 70%;
     margin: auto;
     font-size: 2em;
 }
@@ -39,7 +61,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 80%;
     margin: auto;
 }
 
@@ -52,7 +74,7 @@ main {
 
 .progress-bar {
     width: 0;
-    height: 20px;
+    height: 1.5em;
     background-color: #78c87b;
     text-align: center;
     color: rgb(0, 0, 0);
@@ -84,7 +106,14 @@ img {
     border-radius: 10em;
     padding: 0.5em;
     margin-top: 3em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.484);
+    margin-bottom: -3em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+img:hover{
+    transform: translateY(-30px);
 }
 
 nav {
@@ -98,21 +127,13 @@ nav {
     margin: 6em auto 0 auto;
 }
 
-.meLinks {
-    border: 1px solid black;
-    font-family: 'Mono Grass', sans-serif;
-    font-weight: lighter;
-    margin-top: 0.7em;
-}
 
 #textContent {
     font-size: 1.1em;
     display: flex;
     flex-direction: column;
 }
-img{
-    margin-bottom: -3em;
-}
+
 #contactMe{
     order: 1;
     margin-top: -2em;
@@ -131,6 +152,7 @@ img{
 iframe {
     width: 100%;
     height: 700px;
+    border-radius: 3em;
 }
 
 #firstH3 {
@@ -157,37 +179,35 @@ h3 {
 
 .listRepos {
     background-color: #f3ece7;
-    /* Bakgrundsfärg från din palett */
     width: auto;
     max-width: 300px;
     padding: 1em;
     border-radius: 1.5em;
-    /* Rundare hörn för en mer modern känsla */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Lätt skugga för att ge djup */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.484);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* För animation vid hover */
     margin: 20px auto;
 }
 
 .listRepos:hover {
     transform: translateY(-15px);
-    /* Lätt uppåt-push vid hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    /* Djupare skugga vid hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.705);
 }
 
 
 @media (min-width: 700px) and (max-width: 1200px) {
-    .hide {
-        display: none;
+    
+    .progress{
+        width: 80%;
     }
-
     #firstH3,
     h3 {
         margin-top: 2em;
     }
 
+    #darkmode{
+        top: 2em;
+        right: 2em;
+    }
     #textContent {
         display: flex;
         flex-direction: column;
@@ -228,17 +248,22 @@ h3 {
 
 @media (min-width: 1200px) {
 
+    #darkmode{
+        top: 1em;
+        right: 2em;
+    }
+
     #aboutMe,
     #workExp {
         margin-top: 1em !important;
         /* Nollställ margin-top för andra element om nödvändigt */
     }
 
-    #school {
-        width: 70%;
-    }
     .schoolHeader{
         margin-top: 1em;
+    }
+    .progress{
+        width: 70%;
     }
     .progress-container{
         margin-top: -1em;
@@ -257,17 +282,12 @@ h3 {
     #contactMe{
         position: fixed;
         top: 11em;
-        left: 2em;
+        left: 3em;
     }
 
     img {
         width: 12em;
         margin-bottom: 2em;
-    }
-
-
-    .hide {
-        display: none;
     }
 
     #firstH3 {

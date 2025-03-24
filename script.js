@@ -1,4 +1,7 @@
 const reposHolder = document.getElementById("githubRepos");
+const darkmodeBtn = document.getElementById("darkmode");
+const githubRepos = document.getElementById("githubRepos");
+const main = document.getElementById("main");
 const startDate = new Date("2024-08-26");
 const endDate = new Date("2026-05-31");
 
@@ -65,3 +68,16 @@ fetch("https://api.github.com/users/dilemma98/repos")
       reposHolder.appendChild(repoItem);
     });
   });
+
+ darkmodeBtn.addEventListener("click",() =>{
+  switchDarkLightMode();
+ });
+  function switchDarkLightMode() {
+    document.body.classList.toggle("dark-mode");
+    
+    if (darkmodeBtn.classList.contains("fa-moon")) {
+      darkmodeBtn.classList.replace("fa-moon", "fa-sun");
+    } else {
+      darkmodeBtn.classList.replace("fa-sun", "fa-moon");
+    }
+  }
